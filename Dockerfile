@@ -1,10 +1,8 @@
-FROM python:3.12-slim
-WORKDIR /app
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
-COPY backend/requirements.txt /app/backend/requirements.txt
-RUN pip install --no-cache-dir -r /app/backend/requirements.txt
-COPY backend /app/backend
-COPY frontend /app/frontend
-WORKDIR /app/backend
+FROM python:3.12-alpine
+WORKDIR /srv
+COPY frontend/index.html frontend/demo.html frontend/demo.js frontend/styles.css /srv/
+COPY preview/confidentialite.html /srv/confidentialite.html
+COPY preview/server.py /opt/cleantandem_preview.py
+ENV PYTHONUNBUFFERED=1
 EXPOSE 8080
-CMD ["sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1 --proxy-headers --forwarded-allow-ips='*'"]
+CMD ["python", "/opt/cleantandem_preview.py"]
