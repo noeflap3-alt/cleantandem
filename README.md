@@ -19,3 +19,11 @@
 
 Aucune donnée réelle ; pas de vente ni de facture ; nom/prénom de l'éditeur non publiés ; pas de paiement.
 Une connexion à un hébergeur Railway (ou équivalent) est nécessaire pour obtenir un lien public vers cette version.
+## Liens et état du 12 novembre 2026
+
+- **Démo publique (données fictives uniquement)** : https://cleantandem-demo-production.up.railway.app/
+- **Démo interactive** : https://cleantandem-demo-production.up.railway.app/demo.html
+- Le service public actuel est une **Railway Function**, dont le code déployé a été synchronisé manuellement avec `frontend/index.html`, `frontend/demo.html`, `frontend/demo.js` et `frontend/styles.css`.
+- **Attention : les commits GitHub ne redéploient PAS encore automatiquement** le site. Il faut autoriser le dépôt privé dans les intégrations GitHub du compte Railway puis rattacher la source.
+- `Dockerfile` démarre la démo statique isolée. `Dockerfile.backend` conserve la configuration expérimentale FastAPI/PostgreSQL pour une future préproduction sécurisée.
+- Pas de base clients réelle, pas de paiement, pas d'abonnement commercialisable ; ne jamais importer de données personnelles réelles.
