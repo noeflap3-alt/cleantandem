@@ -1,0 +1,29 @@
+# Environnements et clés privées
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python / tests
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+
+# Données locales / exports clients
+*.sqlite3
+*.sqlite
+*.db
+*.db-*
+exports/
+private/
+secrets/
+
+# Environnement de développement
+.DS_Store
+.vscode/
+.idea/

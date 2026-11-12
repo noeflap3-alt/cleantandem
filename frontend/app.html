@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#173b3a"/><meta name="robots" content="noindex, nofollow"/><title>CleanTandem — Espace pilote (démo)</title>
+<link rel="stylesheet" href="/styles.css"/></head>
+<body>
+<div id="auth" class="auth-shell">
+  <div class="auth-panel"><div class="wordmark"><span class="brandmark">CT</span> CleanTandem</div><p class="eyebrow">ESPACE PILOTE — DONNÉES FICTIVES</p>
+  <h1 id="auth-title">Connexion</h1><p class="muted">Un espace de travail dédié à chaque entreprise. Version de test : utilise uniquement des informations fictives. Pour découvrir sans compte, ouvre la démo libre.</p>
+  <form id="auth-form" class="stack"><div id="org-wrap" class="field hidden"><label for="org">Nom de l'entreprise fictive</label><input id="org" autocomplete="organization" placeholder="Ex. Propreté du Sud"/></div>
+  <div class="field hidden" id="invite-wrap"><label for="invitation">Code d’invitation au pilote (si demandé)</label><input id="invitation" autocomplete="off" placeholder="Code fourni par CleanTandem" /></div><div class="field"><label for="email">Email de démonstration</label><input id="email" type="email" autocomplete="username" placeholder="demo@example.test" required /></div>
+  <div class="field"><label for="password">Mot de passe (12 caractères minimum)</label><input id="password" type="password" autocomplete="current-password" minlength="12" required /></div>
+  <button type="submit" id="auth-submit" class="btn primary wide">Se connecter</button></form>
+  <button type="button" class="text-button" id="auth-toggle">Créer un compte de test</button><p><a class="text-button" href="/demo.html">Découvrir sans compte →</a> · <a class="text-button" href="/">Accueil</a></p>
+  <p id="auth-error" class="error-message" role="alert"></p>
+  <div class="notice"><strong>Important :</strong> n'insère aucune donnée réelle d'un client ou salarié. Les informations de cet espace de test sont enregistrées sur le serveur du pilote. Ne saisis pas de véritables données personnelles ou commerciales.</div>
+  </div><aside class="auth-aside"><span class="big-quote">Devis.<br/>Planning.<br/><em>Rentabilité.</em></span><p>Un outil simple pour piloter une entreprise de propreté.</p></aside>
+</div>
+<div id="shell" class="shell hidden">
+  <aside class="sidebar"><div class="wordmark inverse"><span class="brandmark">CT</span> CleanTandem</div><div class="sidebar-label">ESPACE MÉTIER</div>
+  <nav id="menu" aria-label="Navigation principale">
+    <button data-view="home" class="nav-item active">◫ <span>Tableau de bord</span></button>
+    <button data-view="clients" class="nav-item">♧ <span>Clients</span></button>
+    <button data-view="sites" class="nav-item">⌖ <span>Sites</span></button>
+    <button data-view="quotes" class="nav-item">▤ <span>Devis</span></button>
+    <button data-view="jobs" class="nav-item">▦ <span>Interventions</span></button>
+  </nav>
+  <div class="sidebar-bottom"><strong id="org-name">Entreprise de test</strong><span id="user-email"></span><button id="logout" class="outline-dark">Se déconnecter</button></div>
+  </aside>
+  <main class="main"><div class="top"><div><div class="eyebrow">CLEAN TANDEM / ESPACE PILOTE</div><h1 id="view-title">Tableau de bord</h1><p id="view-desc" class="muted">Organise tes opérations de nettoyage, du devis jusqu'à la marge.</p></div><span class="status">Données fictives uniquement</span></div>
+  <div class="notice banner"><strong>Environnement de démonstration.</strong> Utilise uniquement des données fictives. Aucun paiement n'est proposé ici et le service ne doit pas encore héberger de dossiers réels.</div>
+  <section id="content" aria-live="polite"></section>
+  <footer>CleanTandem — espace pilote de démonstration. Aucun abonnement ni paiement actif. Identité personnelle du porteur de projet non publiée.</footer>
+  </main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script>
+</body></html>
